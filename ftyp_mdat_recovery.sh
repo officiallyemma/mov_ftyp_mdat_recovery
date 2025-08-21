@@ -64,7 +64,11 @@ create () {
 safe_rm(){
     if $DO_CLEANUP; then
         outfile_abs=$(realpath "$1") # for my sanity
-        rm "$outfile_abs"
+        current=$(pwd)
+        if [[ $outfile_abs = $current/* ]]
+        then 
+            rm "$outfile_abs"
+        fi         
     fi
 }
 
