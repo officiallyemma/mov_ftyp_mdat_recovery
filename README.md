@@ -1,6 +1,6 @@
 # How to (potentially) recover video files from a formatted SD card
 
-Fork of [mf-mesh-](https://github.com/bradsk88/mf-mesh) which moves file discovery features from Python to the shell.
+Fork of [mf-mesh-](https://github.com/bradsk88/mf-mesh-) which moves file discovery features from Python to the shell.
 
 Ideally, you *just* formatted the card.  If you've used the card since formatting,
 there is a risk that your data is gone forever.
@@ -29,6 +29,6 @@ $ ./ftyp_mdat_recovery.sh.py
 ```
 
 This will run a brute-force algorithm to pair up every combination of 
-`ftyp/mdat` files in the directory and attempt to generate a screenshot from them.  *This will take a very long time*. Compared to the upstream [mf-mesh-](https://github.com/bradsk88/mf-mesh), this will use FAR less disk space as combinations are checked with ffmpeg and removed if invalid. See `DO_CLEANUP` option at the top of the script.
+`ftyp/mdat` files in the directory and attempt to generate a screenshot from them.  *This will take a very long time*. Compared to the upstream [mf-mesh-](https://github.com/bradsk88/mf-mesh-), this will use FAR less disk space as combinations are checked with ffmpeg and removed if invalid. See `DO_CLEANUP` option at the top of the script.
 
 There are two flags located at the top of the `ftyp_mdat_recovery.sh` file. `DEBUG` controls the verbosity of stdout. `DO_CLEANUP` determines whether or not to delete combinations that have failed. 
